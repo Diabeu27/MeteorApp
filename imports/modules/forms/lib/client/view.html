@@ -1,0 +1,26 @@
+<div layout="row" layout-fill ng-cloak>
+  <md-list flex="15" style="overflow: auto;">
+    <md-subheader class="md-no-sticky">
+      Forms default
+    </md-subheader>
+    <md-list-item ui-sref='app.forms.checkbox' ng-disabled="true"><p>Checkbox</p></md-list-item>
+    <md-list-item ui-sref='app.forms.chips' ng-disabled="true"><p>Chips</p></md-list-item>
+    <md-list-item ui-sref='app.forms.datepicker'><p>Datepicker</p></md-list-item>
+    <md-list-item ui-sref='app.forms.input'><p>Input</p></md-list-item>
+
+    <md-list-item ui-sref='app.forms.radio' ng-disabled="true"><p>Radio</p></md-list-item>
+    <md-list-item ui-sref='app.forms.select'><p>Select</p></md-list-item>
+    <md-list-item ui-sref='app.forms.switch' ng-disabled="true"><p>Switch</p></md-list-item>
+    <md-list-item ui-sref='app.forms.textarea' ng-disabled="true"><p>Textarea</p></md-list-item>
+
+    <md-subheader class="md-no-sticky">
+      Forms custom
+    </md-subheader>
+    <md-list-item ui-sref='app.forms.selectday' ng-disabled="true"><p>Select day</p></md-list-item>
+    <md-list-item ui-sref='app.forms.selectmonth' ng-disabled="true"><p>Select month</p></md-list-item>
+    <md-list-item ui-sref='app.forms.selectyear' ng-disabled="true"><p>Select year</p></md-list-item>
+    <md-list-item ui-sref='app.forms.selectbirthday' ng-disabled="true"><p>Select birthday</p></md-list-item>
+  </md-list>
+
+  <md-content flex class="md-padding" ui-view></md-content>
+</div>

@@ -1,0 +1,123 @@
+
+<section>
+	<h3 class="md-headline">
+		Input
+		<!--
+		<small>
+			Angular material design input with angular-formly and wieldo form types
+		</small>
+	-->
+	</h3>
+	<div>
+		<md-content>
+			<table class='parameters'>
+				<thead>
+					<tr>
+						<th>templateOptions</th>
+						<th>defaultValue</th>
+						<th>Directive</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>theme</td>
+						<td><i>'default'</i></td>
+						<td>md-theme</td>
+						<td>Name of theme you want to use</td>
+					</tr>
+					<tr>
+						<td>type</td>
+						<td><i>'input'</i></td>
+						<td>md-theme</td>
+						<td>Type of field</td>
+					</tr>
+					<tr>
+						<td>label</td>
+						<td></td><td></td>
+						<td>label and aria-label of specified input</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>placeholder</td>
+						<td><i>'Enter date'</i></td>
+						<td>md-placeholder</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>disabled</td>
+						<td><i>false</i></td>
+						<td>ng-disabled</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>required</td>
+						<td><i>false</i></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>min</td>
+						<td><i>null</i></td>
+						<td></td>
+						<td>minimum integer value</td>
+					</tr>
+					<tr>
+						<td>max</td>
+						<td><i>null</i></td>
+						<td></td>
+						<td>maximum integer value</td>
+					</tr>
+					<tr>
+						<td>step</td>
+						<td><i>'any'</i></td>
+						<td></td>
+						<td>step integer value</td>
+					</tr>
+					<tr>
+						<td>mdMaxlength</td>
+						<td></td>
+						<td>md-maxlength</td>
+						<td>Init input maximum character length counter</td>
+					</tr>
+
+				</tbody>
+			</table>
+		</md-content>
+	</div>
+</section>
+
+<section ng-repeat="element in vm.elements">
+  <h3 class="md-subhead">
+    {{ element.title }}
+    <small>
+      {{ element.description }}
+    </small>
+  </h3>
+  <div ng-cloak>
+    <md-content>
+      <md-tabs md-dynamic-height md-border-bottom>
+
+        <!-- Example Tab -->
+        <md-tab label="Example">
+          <md-content>
+            <div class='example'>
+              <form name="vm.form" ng-submit="vm.onSubmit()">
+                <formly-form model="vm.model" fields="element.field" options="vm.options"></formly-form>
+              </form>
+
+            </div>
+          </md-content>
+        </md-tab>
+
+        <!-- JS -->
+        <md-tab label="JS">
+          <md-content>
+            <code><pre>{{ element.js }}</pre></code>
+          </md-content>
+        </md-tab>
+
+      </md-tabs>
+    </md-content>
+  </div>
+</section>

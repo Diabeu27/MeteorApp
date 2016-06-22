@@ -1,0 +1,153 @@
+<section>
+	<h5>
+		Datepicker
+		<small>
+			Angular material design datepicker with angular-formly and wieldo form types
+		</small>
+	</h5>
+	<div>
+		<md-content>
+			<table class='parameters'>
+				<thead>
+					<tr>
+						<th>
+							templateOptions
+						</th>
+						<th>
+							defaultValue
+						</th>
+						<th>
+							Directive
+						</th>
+						<th>
+							Description
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							theme
+						</td>
+						<td>
+							'default'
+						</td>
+						<td>
+							md-theme
+						</td>
+						<td>
+							Name of theme you want to use
+						</td>
+					</tr>
+					<tr>
+						<td>
+							label
+						</td>
+						<td>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							placeholder
+						</td>
+						<td>
+							'Enter date'
+						</td>
+						<td>
+							md-placeholder
+						</td>
+					</tr>
+					<tr>
+						<td>
+							disabled
+						</td>
+						<td>
+							false
+						</td>
+						<td>
+							ng-disabled
+						</td>
+					</tr>
+					<tr>
+						<td>
+							MdDateFilter
+						</td>
+						<td>
+						</td>
+						<td>
+							md-date-filter
+						</td>
+					</tr>
+					<tr>
+						<td>
+							MdMinDate
+						</td>
+						<td>
+						</td>
+						<td>
+							md-min-date
+						</td>
+					</tr>
+					<tr>
+						<td>
+							MdMaxDate
+						</td>
+						<td>
+						</td>
+						<td>
+							md-max-date
+						</td>
+					</tr>
+					<tr>
+						<td>
+							MdOpenOnFocus
+						</td>
+						<td>
+						</td>
+						<td>
+							md-open-on-focus
+						</td>
+					</tr>
+
+				</tbody>
+			</table>
+		</md-content>
+	</div>
+</section>
+
+<section ng-repeat="element in vm.elements">
+  <h6>
+    {{ element.title }}
+    <small>
+      {{ element.description }}
+    </small>
+  </h6>
+  <div ng-cloak>
+    <md-content>
+      <md-tabs md-dynamic-height md-border-bottom>
+
+        <!-- Example Tab -->
+        <md-tab label="Example">
+          <md-content>
+            <div class='example'>
+              <form name="vm.form" ng-submit="vm.onSubmit()">
+                <formly-form model="vm.model" fields="element.field" options="vm.options"></formly-form>
+              </form>
+
+            </div>
+          </md-content>
+        </md-tab>
+
+        <!-- JS -->
+        <md-tab label="JS">
+          <md-content>
+            <code><pre>{{ element.js }}</pre></code>
+          </md-content>
+        </md-tab>
+
+      </md-tabs>
+    </md-content>
+  </div>
+</section>
