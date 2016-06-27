@@ -1,3 +1,4 @@
+
 # MeteorApp
 
 ## Description
@@ -14,10 +15,6 @@ This is an example of Module Meteor Application on angular2-now with packages be
 - PostCSS-SCSS,
 - AutoPrefixer,
 - Meteor Simple Schema - A simple, reactive schema validation smart package for Meteor,
-
-## Why ?
-
-I am doing a project on meteor and i want to share my work
 
 ## Install
 ```
@@ -37,10 +34,11 @@ meteor run
 ```
 
 ## JS Conventions
+http://jshint.com/  
 http://www.w3schools.com/js/js_conventions.asp
 - Always use 4 spaces for indentation of code blocks
-- we use camelCase for identifier names variables
-- we use CamelCase for identifier names functions
+- we use camelCase for identifier names (variables and functions)
+- we use CamelCase for classes
 - Always end a simple statement with a semicolon
 - Do not end a complex statement with a semicolon
 - Don't start names with a $ sign. It will put you in conflict with many JavaScript library names
