@@ -26,6 +26,10 @@ npm install autoprefixer postcss-scss normalize.css --save-dev
 meteor add modules angular-templates pbastowski:angular-babel angularui:angular-ui-router angular:angular-material
 meteor add angular:angular-messages formly:angular-formly wieldo:api-check aldeed:collection2
 meteor add ixdi:material-design-iconic-font fourseven:scss
+npm install --save-dev eslint
+npm install --save-dev babel-eslint
+npm install eslint@1.x babel-eslint@5 --save-dev
+npm install eslint@2.x babel-eslint@6 --save-dev
 ```
 
 ## How to run
@@ -34,7 +38,7 @@ meteor run
 ```
 
 ## JS Conventions
-http://jshint.com/  
+http://eslint.org/
 http://www.w3schools.com/js/js_conventions.asp
 - Always use 4 spaces for indentation of code blocks
 - we use camelCase for identifier names (variables and functions)
