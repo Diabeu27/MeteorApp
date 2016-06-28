@@ -20,6 +20,8 @@ SetModule(ModuleName, [
   formlyValidationMessages.addTemplateOptionValueMessage('minlength', 'minlength', '', 'is the minimum length', 'Too short');
   formlyValidationMessages.addTemplateOptionValueMessage('maxlength', 'maxlength', '', 'is the maximum length', 'Too long');
   formlyValidationMessages.addTemplateOptionValueMessage('pattern', 'patternValidationMessage', '', '', 'Invalid Input');
+  formlyValidationMessages.addTemplateOptionValueMessage('mdMaxChips', 'mdMaxChips', '', '', 'You exceed max chips');
+
 
   formlyValidationMessages.messages.required = ($viewValue, $modelValue, scope) => {
 		if (scope.to.label)
