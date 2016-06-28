@@ -14,6 +14,8 @@
     "angular2-now": "^1.1.6",
     "api-check": "^7.5.5",
     "autoprefixer": "^6.3.6",
+    "babel-eslint": "^6.1.0",
+    "eslint": "^2.13.1",
     "meteor-node-stubs": "~0.2.0",
     "normalize.css": "^4.1.1",
     "postcss-scss": "^0.1.8",
