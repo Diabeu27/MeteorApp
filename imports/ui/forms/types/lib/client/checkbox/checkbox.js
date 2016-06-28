@@ -1,52 +1,56 @@
-
 import templateUrl from './view.html';
+import AddCheckedClassName from '/imports/ui/forms/lib/client/helpers/add-checked-classname';
 
 export default (formlyConfigProvider) => {
-  formlyConfigProvider.setType({
-    templateUrl: templateUrl,
-    name: 'checkbox',
-    defaultOptions: {
-      templateOptions: {
-        theme: 'default',
-        disabled: false,
-        label: "Check me!",
-        placeholder: "Check me!",
-        checked: false,
-        className: ''
-      },
-      // if hideExpression is set then it is not checked when appear
-      expressionProperties: {
-        'templateOptions.className': ($viewValue, $modelValue, scope) => {
-          if ($modelValue === true){
-            if (scope.to.className.indexOf("md-checked") == -1)
-              scope.to.className = scope.to.className+' md-checked';
-          }
-          else {
-            scope.to.className = scope.to.className.replace(" md-checked", "");
-          }
-          return scope.to.className;
-        }
-      },
-      ngModelAttrs: {
-        mdIndeterminate: {
-          attribute: 'md-indeterminate'
+    formlyConfigProvider.setType({
+        templateUrl: templateUrl,
+        name: 'checkbox',
+        defaultOptions: {
+            templateOptions: {
+                theme: 'default',
+                label: "Check me!",
+                disabled: false
+                //onChange:  Conflict with ngChange
+            },
+            // if hideExpression is set then it is not checked when appear
+            expressionProperties: {
+                'templateOptions.className': ($viewValue, $modelValue, scope) => {
+                    return AddCheckedClassName($viewValue,scope).to.className;
+                }
+            },
+            ngModelAttrs: {
+                disabled: {
+                    bound: 'ng-disabled'
+                },
+                ngChange: {
+                    attribute: 'ng-change'
+                },
+                ngChecked: {
+                    attribute: 'ng-checked'
+                },
+                ngFalseValue: {
+                    attribute: 'ng-false-value'
+                },
+                mdIndeterminate: {
+                    attribute: 'md-indeterminate'
+                },
+                mdNoInk: {
+                    attribute: 'md-no-ink'
+                },
+                ngTrueValue: {
+                    attribute: 'ng-true-value'
+                }
+            }
         },
-        mdNoInk: {
-          attribute: 'md-no-ink'
-        },
-        ngTrueValue: {
-          bound: 'ng-true-value'
-        },
-        ngFalseValue: {
-          bound: 'ng-false-value'
-        },
-        ngChecked: {
-          bound: 'ng-checked'
-        },
-        disabled: {
-          bound: 'ng-disabled'
-        },
-      }
-    }
-  });
-}
+        apiCheck: (check) => ({
+            templateOptions: {
+                theme: check.string,
+                label: check.string,
+                disabled: check.bool,
+                ngChange: check.string.optional,
+                ngChecked: check.bool.optional,
+                mdNoInk: check.bool.optional
+            }
+        })
+    });
+};
