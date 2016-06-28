@@ -6,24 +6,24 @@ import {init,SetModule,Component,View, Inject, LocalInjectables} from 'angular2-
 
 init();
 export var $Component = {
-  Name: 'meteor-navigation',
-  templateUrl: templateUrl
-}
+    Name: 'meteor-navigation',
+    templateUrl: templateUrl
+};
 SetModule(ModuleName)
 @Component({
-  selector: $Component.Name
+    selector: $Component.Name
 })
 @View({
-  templateUrl: templateUrl
+    templateUrl: templateUrl
 })
 @Inject([
-  '$scope',
-  'SidenavService',
-  NavigationService.Name
+    '$scope',
+    'SidenavService',
+    NavigationService.Name
 ])
 @LocalInjectables
 export class MeteorNavigation {
-  constructor($scope){
-    this.sidenav = this.SidenavService.Init();
-  }
+    constructor($scope){
+        this.sidenav = this.SidenavService.Init();
+    }
 }

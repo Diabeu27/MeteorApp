@@ -1,13 +1,14 @@
 <md-sidenav class="md-sidenav-left" md-component-id="left" md-disable-backdrop md-whiteframe="4">
 	<md-toolbar>
 		<h1 class="md-toolbar-tools">
-			Navigation
-    </h1>
+            Navigation
+        </h1>
   </md-toolbar>
 	<md-content>
 		<md-list flex>
-			<md-list-item link="Forms" ng-click="click()" ui-sref='app.forms'><p>Forms</p></md-list-item>
+            <md-list-item link="Forms" ng-click="click()" ui-sref='app.forms'><p>Forms</p></md-list-item>
 			<md-list-item link="To do" ng-click="click()" ui-sref='app.todo'><p>To do</p></md-list-item>
+            <md-list-item link="Translates" ng-click="click()" ui-sref='app.translates' ng-disabled="true"><p>Translates</p></md-list-item>
 			<md-list-item link="Sign in" ng-click="click()" ui-sref='app.sign.in' ng-disabled="true"><p>Sign in</p></md-list-item>
 			<md-list-item link="Sign up" ng-click="click()" ui-sref='app.sign.up' ng-disabled="true"><p>Sign up</p></md-list-item>
 		</md-list>
