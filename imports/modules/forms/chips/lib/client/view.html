@@ -1,0 +1,46 @@
+<section>
+    <h3 class="md-headline">
+		Chips
+	</h3>
+	<div>
+		<md-content>
+			<md-button class="md-primary" ng-href="https://material.angularjs.org/latest/demo/chips">
+				Go to Material Design official page
+			</md-button>
+		</md-content>
+	</div>
+</section>
+
+<section ng-repeat="element in vm.elements">
+    <h3 class="md-subhead">
+        {{ element.title }}
+        <small>
+            {{ element.description }}
+        </small>
+    </h3>
+    <div ng-cloak>
+        <md-content>
+            <md-tabs md-dynamic-height md-border-bottom>
+
+                <!-- Example Tab -->
+                <md-tab label="Example">
+                    <md-content>
+                        <div class='example md-padding'>
+                            <form name="{{ element.form }}" ng-submit="vm.onSubmit('{{ element.form }}')">
+                                <formly-form model="element.model" fields="element.field" options="element.options">
+                                    <md-button type='submit' class="md-primary md-raised">
+                                        Submit
+                                    </md-button>
+                				</formly-form>
+                            </form>
+                        </div>
+                    </md-content>
+                </md-tab>
+
+                <!-- JS -->
+                <md-tab label="JS"><md-content><code><pre>{{ element.js }}</pre></code></md-content></md-tab>
+
+            </md-tabs>
+        </md-content>
+    </div>
+</section>
