@@ -25,7 +25,7 @@ export class FormsCheckboxComponent {
         '1': true,
         '2': false,
         '3': false,
-        '4': true,
+        '4': true
     };
 
     constructor() {
