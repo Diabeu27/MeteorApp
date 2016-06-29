@@ -1,24 +1,21 @@
-
 import {ModuleName} from '/imports/modules/forms/lib/client/module';
-
 import templateUrl from './view';
-import {init, SetModule, State, Component, View, Inject, LocalInjectables} from 'angular2-now';
+import {init, SetModule, State, Component, View, LocalInjectables} from 'angular2-now';
 init();
+
 SetModule(ModuleName);
 @State({
-  name: 'work.forms.select',
-  url: '/checkbox'
+    name: 'app.forms.select',
+    url: '/select'
 })
 @Component({
-  selector: 'wieldo-forms-select'
+    selector: 'meteor-forms-select'
 })
 @View({
-  templateUrl: templateUrl
+    templateUrl: templateUrl
 })
-@Inject(['LayoutService'])
 @LocalInjectables
-export class FormsSelectComponent {
-  constructor(){
-
-  }
+export class MeteorFormsSelectComponent {
+    constructor(){
+    }
 }
