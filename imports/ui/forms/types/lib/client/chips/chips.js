@@ -22,13 +22,13 @@ export default (formlyConfigProvider) => {
                     attribute: 'md-max-chips'
                 },
                 mdOnAdd: {
-                    attribute: 'md-on-add'
+                    statement: 'md-on-add'
                 },
                 mdOnRemove: {
-                    attribute: 'md-on-remove'
+                    statement: 'md-on-remove'
                 },
                 mdOnSelect: {
-                    attribute: 'md-on-select'
+                    statement: 'md-on-select'
                 },
                 deleteHint:{
                     attribute: 'delete-hint'
@@ -37,7 +37,7 @@ export default (formlyConfigProvider) => {
                     attribute: 'delete-button-label'
                 },
                 mdSeparatorKeys: {
-                    attribute: 'md-separator-keys'
+                    statement: 'md-separator-keys'
                 }
             }
         }/*,

@@ -5,8 +5,7 @@ export default (formlyConfigProvider) => {
         name: "radio",
         defaultOptions: {
             templateOptions: {
-                theme: "default",
-                disabled: false
+                theme: "default"
             },
             ngModelAttrs: {
                 mdNoInk: {
@@ -16,9 +15,9 @@ export default (formlyConfigProvider) => {
         },
         apiCheck: (check) => ({
             templateOptions: {
-                theme: check.string,
-                disabled: check.bool,
-                options: check.arrayOf(check.object)
+                theme: check.string.optional,
+                disabled: check.bool.optional,
+                options: check.arrayOf(check.object).optional
             }
         })
     });
