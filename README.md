@@ -38,7 +38,7 @@ meteor run
 ```
 
 ## JS Conventions
-http://eslint.org/
+http://eslint.org/  
 http://www.w3schools.com/js/js_conventions.asp
 - Always use 4 spaces for indentation of code blocks
 - we use camelCase for identifier names (variables and functions)
@@ -70,6 +70,7 @@ How do I know when to release 1.0.0?
 
 ## GIT Commit
 - AngularJS Git Commit Message Conventions https://gist.github.com/stephenparish/9941e89d80e2bc58a153
+- http://karma-runner.github.io/0.10/dev/git-commit-msg.html
 
 ## File structure
 ```
@@ -100,22 +101,24 @@ package.js
 
 ### Forms
 angular formly type examples:
-- [ ] checkbox
-- [ ] chips
-- [ ] datepicker
+- [x] checkbox
+- [x] chips
+- [x] datepicker
 - [x] input
-- [ ] radio
-- [ ] select
+- [x] radio
+- [x] select
+- [ ] slider
 - [ ] switch
 - [ ] textarea
 
 angular formly types:
 - [x] checkbox
-- [ ] chips
+- [x] chips
 - [x] datepicker
 - [x] input
-- [ ] radio
-- [ ] select
+- [x] radio
+- [x] select
+- [ ] slider
 - [ ] switch
 - [ ] textarea
 
