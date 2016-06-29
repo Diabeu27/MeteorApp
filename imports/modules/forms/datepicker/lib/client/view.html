@@ -1,116 +1,74 @@
+
 <section>
-	<h5>
+	<h3 class="md-headline">
 		Datepicker
+		<!--
 		<small>
-			Angular material design datepicker with angular-formly and wieldo form types
+			Angular material design input with angular-formly and wieldo form types
 		</small>
-	</h5>
+	-->
+	</h3>
 	<div>
 		<md-content>
 			<table class='parameters'>
 				<thead>
 					<tr>
-						<th>
-							templateOptions
-						</th>
-						<th>
-							defaultValue
-						</th>
-						<th>
-							Directive
-						</th>
-						<th>
-							Description
-						</th>
+						<th>templateOptions</th>
+						<th></th>
+						<th>defaultValue</th>
+						<th>Directive</th>
+						<th>Description</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td>
-							theme
-						</td>
-						<td>
-							'default'
-						</td>
-						<td>
-							md-theme
-						</td>
-						<td>
-							Name of theme you want to use
-						</td>
+						<td>theme</td>
+						<td>'default'</td>
+						<td>md-theme</td>
+						<td>Name of theme you want to use</td>
 					</tr>
 					<tr>
-						<td>
-							label
-						</td>
-						<td>
-						</td>
-						<td>
-						</td>
+						<td>label</td>
+						<td></td>
+						<td></td>
+						<td></td>
 					</tr>
 					<tr>
-						<td>
-							placeholder
-						</td>
-						<td>
-							'Enter date'
-						</td>
-						<td>
-							md-placeholder
-						</td>
+						<td>placeholder</td>
+						<td>'Enter date'</td>
+						<td>md-placeholder</td>
+						<td></td>
 					</tr>
 					<tr>
-						<td>
-							disabled
-						</td>
-						<td>
-							false
-						</td>
-						<td>
-							ng-disabled
-						</td>
+						<td>disabled</td>
+						<td>false</td>
+						<td>ng-disabled</td>
+						<td></td>
 					</tr>
 					<tr>
-						<td>
-							MdDateFilter
-						</td>
-						<td>
-						</td>
-						<td>
-							md-date-filter
-						</td>
+						<td>MdDateFilter</td>
+						<td></td>
+						<td>md-date-filter</td>
+						<td></td>
 					</tr>
 					<tr>
-						<td>
-							MdMinDate
-						</td>
-						<td>
-						</td>
-						<td>
-							md-min-date
-						</td>
+						<td>MdMinDate</td>
+						<td></td>
+						<td>md-min-date</td>
+						<td></td>
 					</tr>
 					<tr>
-						<td>
-							MdMaxDate
-						</td>
-						<td>
-						</td>
-						<td>
-							md-max-date
-						</td>
+						<td>MdMaxDate</td>
+						<td></td>
+						<td>md-max-date</td>
+						<td></td>
 					</tr>
 					<tr>
-						<td>
-							MdOpenOnFocus
-						</td>
-						<td>
-						</td>
-						<td>
-							md-open-on-focus
-						</td>
+						<td>MdOpenOnFocus</td>
+						<td></td>
+						<td>md-open-on-focus</td>
+						<td></td>
 					</tr>
-
 				</tbody>
 			</table>
 		</md-content>
@@ -118,12 +76,12 @@
 </section>
 
 <section ng-repeat="element in vm.elements">
-  <h6>
+  <h3 class="md-subhead">
     {{ element.title }}
     <small>
       {{ element.description }}
     </small>
-  </h6>
+  </h3>
   <div ng-cloak>
     <md-content>
       <md-tabs md-dynamic-height md-border-bottom>
@@ -131,7 +89,7 @@
         <!-- Example Tab -->
         <md-tab label="Example">
           <md-content>
-            <div class='example'>
+            <div class='example md-padding'>
               <form name="vm.form" ng-submit="vm.onSubmit()">
                 <formly-form model="vm.model" fields="element.field" options="vm.options"></formly-form>
               </form>
