@@ -1,9 +1,7 @@
-
-import TemplateUrl from './view';
-
+import templateUrl from './view';
 export default (formlyConfigProvider) => {
-  formlyConfigProvider.setWrapper({
-    name: 'MessagesWrapper',
-    templateUrl: TemplateUrl
-  })
-}
+    formlyConfigProvider.setWrapper({
+        name: 'messagesWrapper',
+        templateUrl: templateUrl
+    });
+};

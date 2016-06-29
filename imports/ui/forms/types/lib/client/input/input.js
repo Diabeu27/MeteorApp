@@ -13,7 +13,7 @@ export default (formlyConfigProvider) => {
                 required: false,
                 maxlength: null,
                 minlength: null,
-                step: 'any',
+                step: 'any'
             },
             ngModelAttrs: {
                 mdMaxlength: {
