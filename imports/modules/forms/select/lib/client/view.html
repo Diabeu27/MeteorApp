@@ -1,1 +1,134 @@
-prepared
+<section>
+	<h3 class="md-headline">
+		Select
+	</h3>
+    <md-button class="md-primary" ng-href="https://material.angularjs.org/latest/demo/select">
+        Go to Material Design official page
+    </md-button>
+	<div>
+		<md-content>
+			<md-tabs md-dynamic-height md-border-bottom>
+
+                <!-- Parameters Tab -->
+                <md-tab label="Parameters">
+                  <md-content>
+                    <div class='example'>
+                        <table class='parameters'>
+                            <thead>
+                                <tr>
+                                    <th>templateOptions</th>
+                                    <th>Type</th>
+                                    <th>defaultValue</th>
+                                    <th>Directive</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>theme</td>
+                                    <td>String</td>
+                                    <td><i>'default'</i></td>
+                                    <td>md-theme</td>
+                                    <td>Name of theme you want to use</td>
+                                </tr>
+                                <tr>
+                                    <td>mdOnClose</td>
+                                    <td>expression</td>
+                                    <td></td>
+                                    <td>md-on-close</td>
+                                    <td>Expression to be evaluated when the select is closed.</td>
+                                </tr>
+                                <tr>
+                                    <td>mdOnOpen</td>
+                                    <td>expression</td>
+                                    <td></td>
+                                    <td>md-on-open</td>
+                                    <td>Expression to be evaluated when opening the select. Will hide the select options and show a spinner until the evaluated promise resolves.</td>
+                                </tr>
+                                <tr>
+                                    <td>placeholder</td>
+                                    <td>string</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Placeholder hint text.</td>
+                                </tr>
+                                <tr>
+                                    <td>ariaLabel</td>
+                                    <td>string</td>
+                                    <td></td>
+                                    <td>aria-label</td>
+                                    <td>Optional label for accessibility. Only necessary if no placeholder or explicit label is present.</td>
+                                </tr>
+                                <tr>
+                                    <td>mdContainerClass</td>
+                                    <td>string</td>
+                                    <td></td>
+                                    <td>md-container-class</td>
+                                    <td>Class list to get applied to the .md-select-menu-container element (for custom styling).</td>
+                                </tr>
+                                <tr>
+                                    <td>options</td>
+                                    <td>array</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Select options</td>
+                                </tr>
+                                <tr>
+                                    <td>groups</td>
+                                    <td>array</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Select options with groups</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                  </md-content>
+                </md-tab>
+
+                <!-- JS -->
+                <md-tab label="Formly">
+					<md-content>
+						<code>
+                            <pre>
+                    		</pre>
+						</code>
+					</md-content>
+				</md-tab>
+            </md-tabs>
+		</md-content>
+	</div>
+</section>
+<section ng-repeat="element in vm.elements">
+    <h3 class="md-subhead">
+        {{ element.title }}
+        <small>
+            {{ element.description }}
+        </small>
+    </h3>
+  <div ng-cloak>
+      <md-content>
+          <md-tabs md-dynamic-height md-border-bottom>
+
+              <!-- Example Tab -->
+              <md-tab label="Example">
+                  <md-content>
+                      <div class='example md-padding'>
+                          <form name="{{ element.form }}" ng-submit="vm.onSubmit(element)">
+                              <formly-form model="element.model" fields="element.field" options="element.options">
+                                  <md-button type='submit' class="md-primary md-raised">
+                                      Submit
+                                  </md-button>
+                              </formly-form>
+                          </form>
+                      </div>
+                  </md-content>
+              </md-tab>
+
+              <!-- JS -->
+              <md-tab label="JS"><md-content><code><pre>{{ element.js }}</pre></code></md-content></md-tab>
+
+          </md-tabs>
+      </md-content>
+  </div>
+</section>
