@@ -13,7 +13,7 @@ SetModule(ModuleName);
     selector: 'meteor-forms-radio',
     templateUrl: templateUrl
 })
-class MeteorFormsRadioComponent {
+export class MeteorFormsRadioComponent {
     model = {};
     constructor(){
         this.elements = elements;
