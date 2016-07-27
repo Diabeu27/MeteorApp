@@ -1,35 +1,46 @@
-
 # MeteorApp
-
-## Description
-
 This is an example of Module Meteor Application on angular2-now with packages below
-- angular babel,
-- angular material design,
-- material design iconic font,
-- angular-templates,
-- angular formly types defined,
-- angular ui router,
+
+## What's inside
+
+- simple Chat - https://github.com/wieldo/simpleChat,
+- formly Material - https://github.com/wieldo/formlyMaterial/,
+- angular2-now - https://github.com/pbastowski/angular2-now,
+- angular babel - https://github.com/pbastowski/angular-meteor-babel,
+- angular material design - https://material.angularjs.org/latest/,
+- angular-templates - https://docs.angularjs.org/guide/templates,
+- pbastowski:angular-templates - https://atmospherejs.com/pbastowski/angular-templates,
+- angular formly types defined - http://docs.angular-formly.com/,
+- angular ui router - https://github.com/angular-ui/ui-router/,
+- angular messages - https://docs.angularjs.org/api/ngMessages/directive/ngMessages,
+- aldeed:collection2 - https://github.com/aldeed/meteor-collection2,
+- Angular marked - https://github.com/Hypercubed/angular-marked,
+- Anti:fake Random text and data generator - https://atmospherejs.com/anti/fake,
+- ApiCheck - https://github.com/kentcdodds/api-check,
+- material design iconic font - http://zavoloklom.github.io/material-design-iconic-font/index.html,
+- Fourseven Sass for Meteor - https://github.com/fourseven/meteor-scss,
+- PostCSS-SCSS - https://github.com/postcss/postcss,
+- AutoPrefixer - https://github.com/postcss/autoprefixer,
+- aldeed:simple-schema - Meteor Simple Schema - https://github.com/aldeed/meteor-simple-schema,
+- Transform your collections with helpers that you define - https://atmospherejs.com/dburles/collection-helpers,
+- mdg:validated-method - A simple wrapper to meteor methods - https://github.com/meteor/validated-method,
 - necolas normalize.css - https://github.com/necolas/normalize.css/,
-- Sass for Meteor,
-- PostCSS-SCSS,
-- AutoPrefixer,
-- Meteor Simple Schema - A simple, reactive schema validation smart package for Meteor,
+- underscore - http://underscorejs.org/,
+- momentjs - http://momentjs.com/
 
 ## Install
 ```
 meteor remove ecmascript blaze-html-templates
-meteor npm install --save-dev angular angular-meteor angular-ui-router angular2-now
+meteor npm install --save angular angular-meteor angular-ui-router angular2-now underscore
 meteor remove standard-minifier-css
-meteor add juliancwirko:postcss
-npm install autoprefixer postcss-scss normalize.css --save-dev
+meteor add juliancwirko:postcss dburles:collection-helpers mdg:validated-method
 meteor add modules angular-templates pbastowski:angular-babel angularui:angular-ui-router angular:angular-material
-meteor add angular:angular-messages formly:angular-formly wieldo:api-check aldeed:collection2
-meteor add ixdi:material-design-iconic-font fourseven:scss
-npm install --save-dev eslint
-npm install --save-dev babel-eslint
-npm install eslint@1.x babel-eslint@5 --save-dev
-npm install eslint@2.x babel-eslint@6 --save-dev
+meteor add angular:angular-messages formly:angular-formly wieldo:api-check aldeed:collection2 aldeed:simple-schema
+meteor add ixdi:material-design-iconic-font fourseven:scss anti:fake
+npm install --save autoprefixer postcss-scss normalize.css moment semver
+npm install --save eslint angular-marked babel-eslint
+npm install eslint@1.x babel-eslint@5 --save
+npm install eslint@2.x babel-eslint@6 --save
 ```
 
 ## How to run
@@ -46,6 +57,7 @@ http://www.w3schools.com/js/js_conventions.asp
 - Always end a simple statement with a semicolon
 - Do not end a complex statement with a semicolon
 - Don't start names with a $ sign. It will put you in conflict with many JavaScript library names
+- JSON strings must be double quoted
 
 ## Versioning
 - Semantic Versioning 2.0.0 http://semver.org/
@@ -99,6 +111,15 @@ package.js
 
 ## Road map
 
+### Dashboard
+Start page
+
+### Chat
+Chat with your friends
+
+### Crypto
+Encrypt your collection data
+
 ### Forms
 angular formly type examples:
 - [x] checkbox
@@ -107,20 +128,9 @@ angular formly type examples:
 - [x] input
 - [x] radio
 - [x] select
-- [ ] slider
-- [ ] switch
-- [ ] textarea
-
-angular formly types:
-- [x] checkbox
-- [x] chips
-- [x] datepicker
-- [x] input
-- [x] radio
-- [x] select
-- [ ] slider
-- [ ] switch
-- [ ] textarea
+- [x] slider
+- [x] switch
+- [x] textarea
 
 ### Todo
 Collections
@@ -129,13 +139,22 @@ Collections
 - [x] Update
 - [x] Remove
 
-## Sign in
-## Sign up
+### Sign in
+Sign in to MeteorApp
+- [x] Form
+- [x] Change state after sign in
+
+### Sign up
+Sign up in MeteorApp
+- [x] Form
+- [ ] Send email
+- [ ] Verify email
+- [ ] Completed
 
 ## Licence
 
 The MIT License (MIT)
-Copyright (c) 2016 STER Project Ścibor Rudnicki
+Copyright (c) 2016 Wieldo
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
