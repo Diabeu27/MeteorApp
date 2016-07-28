@@ -1,10 +1,11 @@
-import templateUrl from './view';
-import {ModuleName} from '/imports/modules/forms/lib/client/module';
-import elements from '/imports/modules/forms/datepicker/api/collection';
-import {init,SetModule,State,Component,View,LocalInjectables} from 'angular2-now';
+import templateUrl from "./view";
+import {ModuleName} from "/imports/modules/forms/lib/client/module";
+import elements from "/imports/modules/forms/datepicker/lib/api/collection";
+import submit from "/imports/modules/forms/lib/client/helpers/on-submit";
+import {init,SetModule,State,Component,LocalInjectables} from 'angular2-now';
 
 init();
-SetModule(ModuleName)
+SetModule(ModuleName);
 @State({
     name: 'app.forms.datepicker',
     url: '/datepicker'
@@ -17,5 +18,8 @@ SetModule(ModuleName)
 export class FormsDatepickerComponent {
     constructor(){
         this.elements = elements;
+    }
+    onSubmit = (name) => {
+        submit(name, this.elements);
     }
 }
