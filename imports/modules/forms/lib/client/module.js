@@ -1,12 +1,13 @@
 // Forms
-import '/imports/ui/forms/lib/client/module';
-import {init,SetModule,options} from 'angular2-now';
-options({controllerAs: 'vm'});
+import "wieldoformlymaterial";
+import {init,SetModule,options} from "angular2-now";
+import customTemplateWrapper from "../../input/lib/client/wrapper/wrapper";
+//options({controllerAs: "vm"});
 
 init();
-export const ModuleName = 'ModuleForms';
+export const ModuleName = "ModuleForms";
 SetModule(ModuleName,[
-  'Forms'
-]).config(() => {
-
+    "wieldoFormlyMaterial"
+]).config((formlyConfigProvider) => {
+    customTemplateWrapper(formlyConfigProvider);
 });
