@@ -6,7 +6,7 @@ import fields from '/imports/modules/todo/form/lib/api/collection';
 import {init,SetModule,Component,View,Inject,LocalInjectables} from 'angular2-now';
 
 init();
-SetModule(ModuleName)
+SetModule(ModuleName);
 @Component({
     selector: 'meteor-todo-form',
     templateUrl: templateUrl,
