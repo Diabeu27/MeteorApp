@@ -2,9 +2,9 @@
 	<h3 class="md-headline">
 		Radio
 	</h3>
-    <md-button class="md-primary" ng-href="https://material.angularjs.org/latest/demo/radioButton">
-        Go to Material Design official page
-    </md-button>
+    <md-button class="md-primary md-link" ng-href="https://material.angularjs.org/1.0.6/demo/input">
+		Go to Material Design official page
+	</md-button>
 	<div>
 		<md-content>
 			<md-tabs md-dynamic-height md-border-bottom>
@@ -25,18 +25,18 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>theme</td>
-                                    <td>String</td>
-                                    <td><i>'default'</i></td>
-                                    <td>md-theme</td>
-                                    <td>Name of theme you want to use</td>
-                                </tr>
-                                <tr>
                                     <td>mdNoInk</td>
                                     <td>Boolean</td>
                                     <td></td>
                                     <td>md-no-ink</td>
                                     <td>Use of attribute indicates use of ripple ink effects</td>
+                                </tr>
+                                <tr>
+                                    <td>ngChange</td>
+                                    <td>Function(value, options, scope)</td>
+                                    <td></td>
+                                    <td>ngChange</td>
+                                    <td>Angular expression to be executed when input changes due to user interaction with the input element.</td>
                                 </tr>
                                 <tr>
                                     <td>options</td>
@@ -67,46 +67,46 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>label</td>
-                                    <td>String</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>displayed option label</td>
-                                </tr>
-                                <tr>
-                                    <td>ariaLabel</td>
-                                    <td>String</td>
-                                    <td></td>
-                                    <td>aria-label</td>
-                                    <td>aria label attribute value</td>
-                                </tr>
-                                <tr>
                                     <td>className</td>
                                     <td>String</td>
                                     <td></td>
                                     <td></td>
-                                    <td>defined option class</td>
+                                    <td>Attribute class of specified option.</td>
                                 </tr>
                                 <tr>
-                                    <td>ngValue</td>
+                                    <td>disabled</td>
+                                    <td>Boolean</td>
+                                    <td></td>
+                                    <td>ng-disabled</td>
+                                    <td>Attribute ng-disabled on specified radio option.</td>
+                                </tr>
+                                <tr>
+                                    <td>label</td>
                                     <td>String</td>
                                     <td></td>
-                                    <td>ng-value</td>
-                                    <td>option value</td>
-                                </tr>
-                                <tr>
-                                    <td>ngClass</td>
-                                    <td>expression</td>
                                     <td></td>
-                                    <td>ng-class</td>
-                                    <td></td>
+                                    <td>displayed option label.</td>
                                 </tr>
                                 <tr>
                                     <td>ngDisabled</td>
                                     <td>Boolean</td>
                                     <td></td>
                                     <td>ng-disabled</td>
-                                    <td>option is disabled</td>
+                                    <td>Attribute ng-disabled on specified radio option.</td>
+                                </tr>
+                                <tr>
+                                    <td>ngValue</td>
+                                    <td>String</td>
+                                    <td></td>
+                                    <td>ng-value</td>
+                                    <td>Attribute ng-value of selected option.</td>
+                                </tr>
+                                <tr>
+                                    <td>value</td>
+                                    <td>String</td>
+                                    <td></td>
+                                    <td>ng-value</td>
+                                    <td>Attribute ng-value of selected option.</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -114,49 +114,40 @@
                   </md-content>
                 </md-tab>
 
-                <!-- JS -->
-                <md-tab label="Formly">
-					<md-content>
-						<code>
-                            <pre>
-                    		</pre>
-						</code>
-					</md-content>
-				</md-tab>
             </md-tabs>
 		</md-content>
 	</div>
 </section>
 <section ng-repeat="element in vm.elements">
-    <h3 class="md-subhead">
-        {{ element.title }}
-        <small>
-            {{ element.description }}
-        </small>
-    </h3>
-  <div ng-cloak>
-      <md-content>
-          <md-tabs md-dynamic-height md-border-bottom>
+    <form name="{{ element.form }}" ng-submit="vm.onSubmit(element.form)">
+        <h3 class="md-subhead">
+            {{ element.title }}
+            <small>
+                {{ element.description }}
+            </small>
+        </h3>
+        <div ng-cloak>
+            <md-content>
+                <md-tabs md-dynamic-height md-border-bottom>
 
-              <!-- Example Tab -->
-              <md-tab label="Example">
-                  <md-content>
-                      <div class='example md-padding'>
-                          <form name="{{ element.form }}" ng-submit="vm.onSubmit(element)">
+                    <!-- Example Tab -->
+                    <md-tab label="Example">
+                        <md-content>
+                            <div class='example md-padding'>
                               <formly-form model="element.model" fields="element.field" options="element.options">
                                   <md-button type='submit' class="md-primary md-raised">
                                       Submit
                                   </md-button>
                               </formly-form>
-                          </form>
-                      </div>
-                  </md-content>
-              </md-tab>
+                            </div>
+                        </md-content>
+                    </md-tab>
 
-              <!-- JS -->
-              <md-tab label="JS"><md-content><code><pre>{{ element.js }}</pre></code></md-content></md-tab>
+                    <!-- JS -->
+                    <md-tab label="JS" ng-if="element.js"><md-content><pre><code>{{ element.js }}</code></pre></md-content></md-tab>
 
-          </md-tabs>
-      </md-content>
-  </div>
+                </md-tabs>
+            </md-content>
+        </div>
+  </form>
 </section>

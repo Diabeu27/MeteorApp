@@ -1,18 +1,20 @@
-import {ModuleName} from '/imports/modules/forms/lib/client/module';
-import templateUrl from './view';
-import elements from '/imports/modules/forms/radio/lib/api/collection';
-import {init,SetModule,State,Component,View,Inject,LocalInjectables} from 'angular2-now';
+import {ModuleName} from "/imports/modules/forms/lib/client/module";
+import templateUrl from "./view";
+import elements from "/imports/modules/forms/radio/lib/api/collection";
+import submit from "/imports/modules/forms/lib/client/helpers/on-submit";
+import {init,SetModule,State,Component,LocalInjectables} from "angular2-now";
 
 init();
 SetModule(ModuleName);
 @State({
-    name: 'app.forms.radio',
-    url: '/radio'
+    name: "app.forms.radio",
+    url: "/radio"
 })
 @Component({
-    selector: 'meteor-forms-radio',
+    selector: "meteor-forms-radio",
     templateUrl: templateUrl
 })
+@LocalInjectables
 export class MeteorFormsRadioComponent {
     model = {};
     constructor(){
@@ -23,8 +25,6 @@ export class MeteorFormsRadioComponent {
         onSubmit
     */
     onSubmit = (form) => {
-        console.log(form.model);
-        alert(JSON.stringify(form.model), null, 2);
+        submit(form, this.elements);
     }
-
 }
