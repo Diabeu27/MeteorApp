@@ -3,7 +3,7 @@ This is an example of Module Meteor Application on angular2-now with packages be
 
 ## What's inside
 
-- simple Chat - https://github.com/wieldo/simpleChat,
+- simple Chat - https://github.com/wieldo/simple-chat,
 - formly Material - https://github.com/wieldo/formlyMaterial/,
 - angular2-now - https://github.com/pbastowski/angular2-now,
 - angular babel - https://github.com/pbastowski/angular-meteor-babel,
